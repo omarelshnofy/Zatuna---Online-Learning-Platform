@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Zatuna - Online Learning Platform</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav wrap">
+            <a class="brand" href="#home">
+                <span class="logo">✳</span>Zatuna<span>Online Learning Platform</span>
+            </a>
+
+            <button id="menuBtn" class="menu" aria-label="Toggle menu">
+                ☰
+            </button>
+
+            <div id="navLinks" class="links">
+                <a href="#home">Home</a>
+                <a href="#courses">Explore Courses</a>
+                <a href="#free-courses">Free Courses</a>
+                <a href="#paid-courses">Premium</a>
+                <a href="#instructors">Instructors</a>
+                <a href="#about">About</a>
+            </div>
+
+            <div class="actions">
+                <button id="themeBtn" class="theme" aria-label="Toggle theme">
+                    ☾
+                </button>
+
+                <div id="userActions" class="userActions">
+                    <button class="btn ghost auth" id="signinBtn">Sign in</button>
+                    <button class="btn primary auth" id="signupBtn">Get started ↗</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero wrap" id="home">
+            <div>
+                <div class="eyebrow">
+                    ✳ YOUR NEXT CHAPTER STARTS HERE
+                </div>
+
+                <h1>
+                    Learn new skills.
+                    <br>
+                    <em>Build your future.</em>
+                </h1>
+
+                <p class="lead">
+                    Discover thoughtfully designed courses, learn from
+                    experienced instructors, and move forward at your own pace.
+                </p>
+
+                <div class="heroBtns">
+                    <a class="btn primary big" href="#courses">
+                        Explore courses →
+                    </a>
+
+                    <a class="btn ghost big" href="#free-courses">
+                        ▷ Start for free
+                    </a>
+                </div>
+
+                <div class="proof">
+                    <div class="avatars">
+                        <i>AM</i>
+                        <i>SK</i>
+                        <i>YH</i>
+                        <i>+</i>
+                    </div>
+
+                    <span>
+                        <b>Learning made simple</b>
+                        <small>One step at a time, at your pace.</small>
+                    </span>
+                </div>
+            </div>
+
+            <div class="heroArt">
+                <div class="float f1">
+                    ✦
+                    <span>
+                        <b>Learn at your pace</b>
+                        <small>Anytime, anywhere</small>
+                    </span>
+                </div>
+
+                <div class="artCard">
+                    <div class="artHead">
+                        YOUR LEARNING SPACE
+                        <span>● OPEN TO LEARN</span>
+                    </div>
+
+                    <div class="bookArt">
+                        <div class="orbit"></div>
+                        <div class="bookBack"></div>
+
+                        <div class="bookFront">
+                            LEARN
+                            <br>
+                            <b>MORE.</b>
+                            <small>✳</small>
+                        </div>
+                    </div>
+
+                    <div class="artFoot">
+                        <span>
+                            <small>Keep growing</small>
+                            <b>Your future self will thank you.</b>
+                        </span>
+
+                        <i>↗</i>
+                    </div>
+                </div>
+
+                <div class="float f2">
+                    ✓
+                    <span>
+                        <b>Small steps count</b>
+                        <small>Progress over perfection</small>
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics -->
+        <section class="stats wrap">
+            <div>
+                <b>24<span>+</span></b>
+                <small>Course spaces ready</small>
+            </div>
+
+            <div>
+                <b>08</b>
+                <small>Learning categories</small>
+            </div>
+
+            <div>
+                <b>04</b>
+                <small>Instructor profiles</small>
+            </div>
+
+            <div class="statNote">
+                ✳
+                <span>
+                    Make room for
+                    <br>
+                    <b>what's next.</b>
+                </span>
+            </div>
+        </section>
+
+        <!-- Courses Section -->
+        <section id="courses" class="section courses">
+            <div class="wrap">
+                <div class="sectionHead">
+                    <div>
+                        <div class="eyebrow">FIND YOUR NEXT SKILL</div>
+
+                        <h2>
+                            Explore our courses<span>.</span>
+                        </h2>
+
+                        <p>
+                            Find the right course for where you want to go.
+                        </p>
+                    </div>
+
+                    <a class="textLink" href="#free-courses">
+                        Browse courses →
+                    </a>
+                </div>
+
+                <!-- Course Filters -->
+                <div class="filters">
+                    <label class="search">
+                        ⌕
+                        <input
+                            id="search"
+                            placeholder="Search courses or instructors…"
+                        >
+                    </label>
+
+                    <select id="category">
+                        <option value="all">All categories</option>
+                    </select>
+
+                    <select id="type">
+                        <option value="all">All course types</option>
+                        <option value="free">Free courses</option>
+                        <option value="paid">Premium courses</option>
+                    </select>
+
+                    <select id="sort">
+                        <option value="default">Sort: Featured</option>
+                        <option value="title">Title: A–Z</option>
+                        <option value="duration">Duration: shortest</option>
+                        <option value="price-low">Price: low to high</option>
+                        <option value="price-high">Price: high to low</option>
+                    </select>
+
+                    <button id="clear" class="clear">
+                        Clear
+                    </button>
+                </div>
+
+                <p id="summary" class="summary">
+                    Showing all courses
+                </p>
+
+                <!-- Free Courses -->
+                <div id="free-courses" class="courseGroup">
+                    <div class="groupHead">
+                        <div>
+                            <label>START HERE</label>
+                            <h3>Free courses</h3>
+                            <p>Good things can start for free.</p>
+                        </div>
+
+                        <span id="freeCount" class="count">
+                            12 courses
+                        </span>
+                    </div>
+
+                    <div id="freeGrid" class="grid"></div>
+                </div>
+
+                <!-- Premium Courses -->
+                <div id="paid-courses" class="courseGroup">
+                    <div class="groupHead">
+                        <div>
+                            <label>GO DEEPER</label>
+                            <h3>Premium courses</h3>
+                            <p>
+                                Invest in your skills with structured learning.
+                            </p>
+                        </div>
+
+                        <span id="paidCount" class="count">
+                            12 courses
+                        </span>
+                    </div>
+
+                    <div id="paidGrid" class="grid"></div>
+                </div>
+
+                <!-- Empty Search Results -->
+                <div id="empty" class="empty hidden">
+                    <div>⌕</div>
+                    <h3>No courses found</h3>
+
+                    <p>
+                        Try another search term or clear your filters.
+                    </p>
+
+                    <button class="btn primary" id="emptyClear">
+                        Clear filters
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="section wrap" id="categories">
+            <div class="sectionHead">
+                <div>
+                    <div class="eyebrow">LEARN WHAT YOU LOVE</div>
+
+                    <h2>
+                        Explore by category<span>.</span>
+                    </h2>
+
+                    <p>
+                        A good place to start is a subject that sparks
+                        your curiosity.
+                    </p>
+                </div>
+            </div>
+
+            <div id="categoryGrid" class="categoryGrid"></div>
+        </section>
+
+        <!-- Instructors Section -->
+        <section class="section instructors" id="instructors">
+            <div class="wrap">
+                <div class="sectionHead">
+                    <div>
+                        <div class="eyebrow">
+                            PEOPLE WHO HELP YOU GROW
+                        </div>
+
+                        <h2>
+                            Meet the instructors<span>.</span>
+                        </h2>
+
+                        <p>
+                            Learn with guidance from people who love
+                            sharing what they know.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="instructorGrid">
+                    <article>
+                        <i class="av green">AM</i>
+
+                        <div>
+                            <b>Ahmed Mohamed</b>
+                            <p>Web Development</p>
+                            <small>4 courses</small>
+                        </div>
+
+                        <a href="#courses">↗</a>
+                    </article>
+
+                    <article>
+                        <i class="av sand">SK</i>
+
+                        <div>
+                            <b>Sarah Khaled</b>
+                            <p>Design &amp; Creativity</p>
+                            <small>3 courses</small>
+                        </div>
+
+                        <a href="#courses">↗</a>
+                    </article>
+
+                    <article>
+                        <i class="av lilac">YH</i>
+
+                        <div>
+                            <b>Youssef Hassan</b>
+                            <p>Data &amp; AI</p>
+                            <small>5 courses</small>
+                        </div>
+
+                        <a href="#courses">↗</a>
+                    </article>
+
+                    <article>
+                        <i class="av blue">MN</i>
+
+                        <div>
+                            <b>Mariam Nabil</b>
+                            <p>Business &amp; Marketing</p>
+                            <small>4 courses</small>
+                        </div>
+
+                        <a href="#courses">↗</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- About and Benefits -->
+        <section class="section wrap benefits" id="about">
+            <div>
+                <div class="eyebrow">A BETTER WAY TO LEARN</div>
+
+                <h2>
+                    Learning that fits
+                    <br>
+                    your life<span>.</span>
+                </h2>
+
+                <p>
+                    Build skills in a way that feels clear, flexible,
+                    and achievable. Your journey doesn't have to happen
+                    all at once.
+                </p>
+
+                <a class="textLink" href="#courses">
+                    Find your course →
+                </a>
+            </div>
+
+            <div class="benefitGrid">
+                <article>
+                    <i>◷</i>
+
+                    <span>
+                        <b>Flexible learning</b>
+                        <small>Learn at a pace that works for you.</small>
+                    </span>
+                </article>
+
+                <article>
+                    <i>✳</i>
+
+                    <span>
+                        <b>Experienced instructors</b>
+                        <small>
+                            Learn from people with practical knowledge.
+                        </small>
+                    </span>
+                </article>
+
+                <article>
+                    <i>↗</i>
+
+                    <span>
+                        <b>Free and premium options</b>
+                        <small>
+                            Start free or choose a deeper path.
+                        </small>
+                    </span>
+                </article>
+
+                <article>
+                    <i>▤</i>
+
+                    <span>
+                        <b>Everything in one place</b>
+                        <small>
+                            Keep your learning journey organized.
+                        </small>
+                    </span>
+                </article>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section id="signup" class="wrap cta">
+            <div>
+                <div class="eyebrow">YOUR NEXT CHAPTER</div>
+
+                <h2>
+                    Your learning journey
+                    <br>
+                    starts here.
+                </h2>
+
+                <p>
+                    Choose a course, stay curious, and keep moving forward.
+                </p>
+            </div>
+
+            <a href="#courses" class="btn white big">
+                Explore courses →
+            </a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="wrap footer">
+            <div>
+                <a class="brand" href="#home">
+                    <span class="logo">✳</span>Zatuna<span></span>
+                </a>
+
+                <p>
+                    A calmer, clearer way to keep learning and growing.
+                </p>
+            </div>
+
+            <div>
+                <b>Explore</b>
+                <a href="#courses">All courses</a>
+                <a href="#free-courses">Free courses</a>
+                <a href="#paid-courses">Premium courses</a>
+                <a href="#categories">Categories</a>
+            </div>
+
+            <div>
+                <b>Platform</b>
+                <a href="#about">About us</a>
+                <a href="#instructors">Instructors</a>
+                <a href="#signup">Get started</a>
+            </div>
+
+            <div>
+                <b>Stay connected</b>
+
+                <p>
+                    Contact details and social links can be added here.
+                </p>
+
+                <span class="socials">ig　in　yt</span>
+            </div>
+        </div>
+
+        <div class="wrap footBottom">
+            <span>© 2026 EduGreen. All rights reserved.</span>
+
+            <span>
+                Made for curious minds
+                <b>✳</b>
+            </span>
+        </div>
+    </footer>
+
+    <!-- Course Dialog -->
+    <dialog id="dialog">
+        <button id="closeDialog" class="close">×</button>
+        <div id="dialogContent"></div>
+    </dialog>
+
+    <!-- Authentication Dialog -->
+    <dialog id="authDialog" class="authDialog">
+        <button id="closeAuthDialog" class="close">×</button>
+        <div class="authHeader">
+            <div class="authTabs">
+                <button type="button" id="tabSignin" class="authTab active">Sign In</button>
+                <button type="button" id="tabSignup" class="authTab">Create Account</button>
+            </div>
+        </div>
+
+        <!-- Sign In Form -->
+        <form id="signinForm" class="authForm">
+            <h3>Welcome to Zatuna</h3>
+            <p class="authSub">🔒 Mandatory Sign In: Please log in or select a demo account below to access the platform.</p>
+            
+            <label class="inputField">
+                <span>Email address</span>
+                <input type="email" id="signinEmail" placeholder="name@example.com" required>
+            </label>
+
+            <label class="inputField">
+                <span>Password</span>
+                <input type="password" id="signinPassword" placeholder="••••••••" required>
+            </label>
+
+            <div class="authMeta">
+                <label class="checkboxLabel">
+                    <input type="checkbox" id="rememberMe" checked>
+                    <span>Remember me</span>
+                </label>
+                <a href="#" id="forgotPassword" class="authLink">Forgot password?</a>
+            </div>
+
+            <div class="authDivider"><span>or quick demo login (Password: 1234)</span></div>
+
+            <div class="demoAccounts">
+                <div class="demoBtns">
+                    <button type="button" class="demoBtn" data-email="student@zatuna.com" data-name="Student User" data-role="Student">🎓 Student</button>
+                    <button type="button" class="demoBtn" data-email="instructor@zatuna.com" data-name="Instructor User" data-role="Instructor">👨‍🏫 Instructor</button>
+                    <button type="button" class="demoBtn" data-email="manager@zatuna.com" data-name="Manager User" data-role="Manager">👑 Manager</button>
+                </div>
+            </div>
+
+            <div class="authDivider"><span>or continue with</span></div>
+
+            <div class="socialBtns">
+                <button type="button" class="socialBtn" id="googleLogin">
+                    <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+                    Google
+                </button>
+                <button type="button" class="socialBtn" id="githubLogin">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    GitHub
+                </button>
+            </div>
+        </form>
+
+        <!-- Sign Up Form -->
+        <form id="signupForm" class="authForm hidden">
+            <h3>Create your account</h3>
+            <p class="authSub">Start learning with free and premium courses.</p>
+            
+            <label class="inputField">
+                <span>Full Name</span>
+                <input type="text" id="signupName" placeholder="e.g. Omar Ahmed" required>
+            </label>
+
+            <label class="inputField">
+                <span>Email address</span>
+                <input type="email" id="signupEmail" placeholder="name@example.com" required>
+            </label>
+
+            <label class="inputField">
+                <span>Password</span>
+                <input type="password" id="signupPassword" placeholder="At least 6 characters" required minlength="6">
+            </label>
+
+            <button type="submit" class="btn primary big fullWidth">Create Account →</button>
+        </form>
+    </dialog>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <!-- JavaScript Files -->
+    <script src="courses.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zatuna – Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body class="dash-body">
+
+  <!-- SIDEBAR -->
+  <aside class="dash-sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <a href="index.html" class="brand-link" title="Back to Homepage">
+        <span class="logo">✳</span>
+        <span class="brand-name">Zatuna</span>
+      </a>
+      <button class="sidebar-close" id="sidebarClose" aria-label="Close sidebar">✕</button>
+    </div>
+    <nav class="sidebar-nav" id="sidebarNav"></nav>
+    <div class="sidebar-footer">
+      <div class="sidebar-user" id="sidebarUser"></div>
+    </div>
+  </aside>
+
+  <!-- OVERLAY for mobile -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- MAIN AREA -->
+  <div class="dash-main" id="dashMain">
+
+    <!-- TOP NAVBAR -->
+    <header class="dash-topbar">
+      <div class="topbar-left">
+        <button class="topbar-hamburger" id="topbarHamburger" aria-label="Toggle sidebar">☰</button>
+        <h1 class="topbar-title" id="topbarTitle">Dashboard</h1>
+      </div>
+      <div class="topbar-right">
+        <button class="topbar-icon-btn notif-btn" id="notifBtn" aria-label="Notifications">
+          🔔<span class="notif-badge" id="notifBadge">3</span>
+        </button>
+
+        <div class="topbar-profile" id="topbarProfile">
+          <div class="topbar-avatar" id="topbarAvatar"></div>
+          <button class="topbar-dots" id="dotsMenuBtn" aria-label="Options">⋮</button>
+          <div class="dots-dropdown hidden" id="dotsDropdown">
+            <a href="#" class="dots-item" data-action="profile">👤 My Profile</a>
+            <a href="#" class="dots-item" data-action="settings">⚙️ Account Settings</a>
+            <a href="#" class="dots-item" data-action="notif-settings">🔔 Notifications Settings</a>
+            <a href="#" class="dots-item" data-action="help">❓ Help Center</a>
+            <a href="#" class="dots-item" data-action="privacy">🔒 Privacy & Security</a>
+            <div class="dots-divider"></div>
+            <a href="#" class="dots-item danger" data-action="logout">🚪 Logout</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- NOTIFICATIONS PANEL -->
+    <div class="notif-panel hidden" id="notifPanel">
+      <div class="notif-panel-head">
+        <b>Notifications</b>
+        <button id="notifClear" class="notif-clear-btn">Mark all read</button>
+      </div>
+      <div class="notif-list" id="notifList"></div>
+    </div>
+
+    <!-- CONTENT SECTIONS -->
+    <div class="dash-content" id="dashContent"></div>
+
+  </div>
+
+  <!-- TOAST -->
+  <div id="toast" class="toast"></div>
+
+  <!-- CONFIRM DIALOG -->
+  <dialog id="confirmDialog" class="confirm-dialog">
+    <h3 id="confirmTitle">Confirm Action</h3>
+    <p id="confirmMsg"></p>
+    <div class="confirm-btns">
+      <button class="btn ghost" id="confirmCancel">Cancel</button>
+      <button class="btn danger-btn" id="confirmOk">Confirm</button>
+    </div>
+  </dialog>
+
+  <script src="courses.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>
